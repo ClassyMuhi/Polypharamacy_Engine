@@ -1,0 +1,20 @@
+[
+  {
+    "drug1": "Aspirin",
+    "drug2": "Ibuprofen",
+    "severity": "High",
+    "description": "Increased risk of gastrointestinal bleeding and reduced antiplatelet effect of Aspirin."
+  },
+  {
+    "drug1": "Lisinopril",
+    "drug2": "Ibuprofen",
+    "severity": "Moderate",
+    "description": "NSAIDs may decrease the antihypertensive effect of ACE inhibitors and increase risk of kidney injury."
+  },
+  {
+    "drug1": "Omeprazole",
+    "drug2": "Sertraline",
+    "severity": "Low",
+    "description": "Omeprazole can mildly increase the blood levels of Sertraline."
+  }
+]

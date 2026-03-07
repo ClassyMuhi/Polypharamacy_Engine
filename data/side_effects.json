@@ -1,0 +1,11 @@
+{
+  "Aspirin": ["Bleeding", "Stomach Ulcer", "Nausea", "Dizziness"],
+  "Lisinopril": ["Dizziness", "Dry Cough", "Hyperkalemia"],
+  "Metformin": ["Nausea", "Diarrhea", "Lactic Acidosis"],
+  "Atorvastatin": ["Muscle Pain", "Liver Damage", "Diarrhea"],
+  "Omeprazole": ["Headache", "Bone Fractures", "Diarrhea"],
+  "Amlodipine": ["Dizziness", "Swelling", "Fatigue"],
+  "Ibuprofen": ["Stomach Ulcer", "Bleeding", "Kidney Damage", "Dizziness"],
+  "Sertraline": ["Nausea", "Dizziness", "Insomnia", "Dry Mouth"],
+  "Zolpidem": ["Dizziness", "Drowsiness", "Confusion", "Falls"]
+}

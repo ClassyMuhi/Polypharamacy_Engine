@@ -1,0 +1,40 @@
+{
+  "Ibuprofen": [
+    {
+      "disease": "Chronic Kidney Disease",
+      "severity": "High",
+      "reason": "NSAIDs can reduce blood flow to the kidneys and worsen kidney function."
+    },
+    {
+      "disease": "Peptic Ulcer Disease",
+      "severity": "Severe",
+      "reason": "Increases risk of gastrointestinal bleeding."
+    }
+  ],
+  "Metformin": [
+    {
+      "disease": "Severe Renal Impairment",
+      "severity": "Severe",
+      "reason": "Increased risk of lactic acidosis."
+    }
+  ],
+  "Aspirin": [
+    {
+      "disease": "Bleeding Disorders",
+      "severity": "Severe",
+      "reason": "Increases risk of severe bleeding."
+    },
+    {
+      "disease": "Peptic Ulcer Disease",
+      "severity": "High",
+      "reason": "Increases risk of gastrointestinal bleeding."
+    }
+  ],
+  "Lisinopril": [
+    {
+      "disease": "Hyperkalemia",
+      "severity": "High",
+      "reason": "Can further increase potassium levels in the blood."
+    }
+  ]
+}
