@@ -1,0 +1,10 @@
+.env
+venv/
+venv-3.11/
+__pycache__/
+*.pyc
+tests/__pycache__/
+modules/__pycache__/
+modules/ocr_model/__pycache__/
+test_images/
+*.txt
