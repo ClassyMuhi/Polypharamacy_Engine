@@ -1,0 +1,40 @@
+{
+  "patient_data": {
+    "patient_id": "P102",
+    "age": 72,
+    "medications": [
+      "Warfarin",
+      "Aspirin",
+      "Ibuprofen",
+      "Metformin",
+      "Lisinopril"
+    ],
+    "interactions": [
+      {
+        "drug_1": "Warfarin",
+        "drug_2": "Aspirin",
+        "severity": "High",
+        "clinical_risk": "Increased bleeding risk due to combined anticoagulant effect"
+      },
+      {
+        "drug_1": "Aspirin",
+        "drug_2": "Ibuprofen",
+        "severity": "Moderate",
+        "clinical_risk": "Reduced antiplatelet effect and increased GI bleeding risk"
+      },
+      {
+        "drug_1": "Warfarin",
+        "drug_2": "Ibuprofen",
+        "severity": "High",
+        "clinical_risk": "NSAIDs increase anticoagulant effect and GI bleeding risk"
+      },
+      {
+        "drug_1": "Metformin",
+        "drug_2": "Ibuprofen",
+        "severity": "Moderate",
+        "clinical_risk": "NSAIDs may reduce metformin clearance, increase risk of lactic acidosis"
+      }
+    ]
+  },
+  "output_format": "json"
+}
