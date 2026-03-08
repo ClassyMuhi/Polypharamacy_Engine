@@ -7,6 +7,23 @@ list for dangerous drug-drug interactions and polypharmacy risks.
 Also defines the in-memory drug interaction database used for lookups.
 """
 
+import sys
+import os
+
+# ── Load environment variables from .env via project config ──────────────
+# Walk up from this file's location to find config.py at the repo root
+_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _repo_root not in sys.path:
+    sys.path.insert(0, _repo_root)
+
+try:
+    import config  # loads .env and exposes GEMINI_API_KEY, GEMINI_MODEL
+    _GEMINI_API_KEY = config.GEMINI_API_KEY
+    _GEMINI_MODEL   = config.GEMINI_MODEL
+except ImportError:
+    _GEMINI_API_KEY = ""
+    _GEMINI_MODEL   = "gemini-2.5-flash"
+
 from itertools import combinations
 from typing import Optional
 from drug import Drug, Severity
