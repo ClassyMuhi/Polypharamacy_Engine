@@ -281,10 +281,10 @@ class ReportGenerator:
         builder.add_section(
             "INTERACTION RISK SUMMARY",
             f"Total Interactions: {risk['total_interactions']}\n"
-            f"Critical: {risk['critical_count']} {severity_to_emoji('Critical')}\n"
-            f"High: {risk['high_count']} {severity_to_emoji('High')}\n"
-            f"Moderate: {risk['moderate_count']} {severity_to_emoji('Moderate')}\n"
-            f"Low: {risk['low_count']} {severity_to_emoji('Low')}\n"
+            f"Critical: {risk['critical_count']} (Critical)\n"
+            f"High: {risk['high_count']} (High)\n"
+            f"Moderate: {risk['moderate_count']} (Moderate)\n"
+            f"Low: {risk['low_count']} (Low)\n"
             f"Overall Risk Level: {risk['overall_risk']}"
         )
 
@@ -294,7 +294,7 @@ class ReportGenerator:
             for idx, interaction in enumerate(report["interactions"], 1):
                 interactions_text += (
                     f"\n{idx}. {interaction['drug_1']} + {interaction['drug_2']}\n"
-                    f"   Severity: {interaction['severity']} {interaction['severity_emoji']}\n"
+                    f"   Severity: {interaction['severity']}\n"
                     f"   Clinical Risk: {interaction['clinical_risk']}\n"
                     f"   Explanation: {interaction['ai_explanation']}\n"
                 )

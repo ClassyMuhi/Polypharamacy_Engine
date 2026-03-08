@@ -1,0 +1,84 @@
+{
+  "report_id": "RPT20260308103925",
+  "generated_at": "2026-03-08T10:39:25.088380",
+  "patient_summary": {
+    "patient_id": "P102",
+    "age": 72,
+    "medication_count": 5,
+    "interaction_count": 4,
+    "report_date": "2026-03-08 10:39:25"
+  },
+  "medication_list": {
+    "total_count": 5,
+    "medications": [
+      "Warfarin",
+      "Aspirin",
+      "Ibuprofen",
+      "Metformin",
+      "Lisinopril"
+    ],
+    "is_polypharmacy": true
+  },
+  "interactions": [
+    {
+      "drug_1": "Warfarin",
+      "drug_2": "Aspirin",
+      "severity": "High",
+      "severity_level": 3,
+      "clinical_risk": "Increased bleeding risk due to combined anticoagulant effect",
+      "ai_explanation": "Warfarin and Aspirin interact due to: Increased bleeding risk due to combined anticoagulant effect. Elderly patients are at elevated risk. Review medication necessity and timing. Implement regular monitoring for adverse effects.",
+      "severity_emoji": "\ud83d\udfe0"
+    },
+    {
+      "drug_1": "Warfarin",
+      "drug_2": "Ibuprofen",
+      "severity": "High",
+      "severity_level": 3,
+      "clinical_risk": "NSAIDs increase anticoagulant effect and GI bleeding risk",
+      "ai_explanation": "Warfarin and Ibuprofen interact due to: NSAIDs increase anticoagulant effect and GI bleeding risk. Elderly patients are at elevated risk. Review medication necessity and timing. Implement regular monitoring for adverse effects.",
+      "severity_emoji": "\ud83d\udfe0"
+    },
+    {
+      "drug_1": "Aspirin",
+      "drug_2": "Ibuprofen",
+      "severity": "Moderate",
+      "severity_level": 2,
+      "clinical_risk": "Reduced antiplatelet effect and increased GI bleeding risk",
+      "ai_explanation": "Aspirin and Ibuprofen interact due to: Reduced antiplatelet effect and increased GI bleeding risk. Monitor patient for signs of adverse effects. Consider adjusting dosages or timing. Patient should be informed of potential risks.",
+      "severity_emoji": "\ud83d\udfe1"
+    },
+    {
+      "drug_1": "Metformin",
+      "drug_2": "Ibuprofen",
+      "severity": "Moderate",
+      "severity_level": 2,
+      "clinical_risk": "NSAIDs may reduce metformin clearance, increase risk of lactic acidosis",
+      "ai_explanation": "Metformin and Ibuprofen interact due to: NSAIDs may reduce metformin clearance, increase risk of lactic acidosis. Monitor patient for signs of adverse effects. Consider adjusting dosages or timing. Patient should be informed of potential risks.",
+      "severity_emoji": "\ud83d\udfe1"
+    }
+  ],
+  "polypharmacy_assessment": {
+    "is_polypharmacy": true,
+    "medication_count": 5,
+    "threshold": 5,
+    "risk_level": "Moderate",
+    "warning": "ALERT: Patient meets criteria for polypharmacy with 5 medications. In elderly patients, this increases adverse event risk. Review each medication for continued necessity and appropriateness. Implement regular monitoring."
+  },
+  "clinical_recommendations": [
+    "Consult with clinical pharmacist",
+    "Immediate clinical review required",
+    "Multiple interactions detected. Comprehensive medication review recommended.",
+    "Increase frequency of patient follow-up and monitoring.",
+    "Consider alternative medications",
+    "Consider discontinuing or replacing high-risk medications.",
+    "Monitor patient closely for adverse events"
+  ],
+  "risk_summary": {
+    "total_interactions": 4,
+    "critical_count": 0,
+    "high_count": 2,
+    "moderate_count": 2,
+    "low_count": 0,
+    "overall_risk": "High"
+  }
+}
