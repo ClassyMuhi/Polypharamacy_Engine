@@ -15,6 +15,8 @@ from pydantic import BaseModel, Field
 
 from modules.report_generator import ReportGenerator
 from modules.ai_explanation_engine import AIExplanationEngine
+from hc03_system.db import db
+from modules.patient_crud import create_patient, get_patient
 from config import (
     FASTAPI_HOST, FASTAPI_PORT, FASTAPI_RELOAD, DEBUG_MODE,
     LOG_LEVEL, LOGGING_FORMAT, LOG_FILE
@@ -40,6 +42,27 @@ app = FastAPI(
     redoc_url=None,  # Disable ReDoc UI
     openapi_url=None  # Disable OpenAPI schema endpoint
 )
+# ==================== API Endpoints ====================
+
+# --- MongoDB Patient CRUD Endpoints ---
+from fastapi import Body
+from bson import ObjectId
+
+@app.post("/patients/", tags=["Patients"])
+async def add_patient(patient: dict = Body(...)):
+    """Add a new patient to MongoDB"""
+    patient_id = await create_patient(patient)
+    return {"status": "success", "patient_id": patient_id}
+
+@app.get("/patients/{patient_id}", tags=["Patients"])
+async def read_patient(patient_id: str):
+    """Get a patient by ID from MongoDB"""
+    patient = await get_patient(patient_id)
+    if not patient:
+        raise HTTPException(status_code=404, detail="Patient not found")
+    # Convert ObjectId to string for JSON serialization
+    patient["_id"] = str(patient["_id"])
+    return {"status": "success", "patient": patient}
 
 # Add CORS middleware
 app.add_middleware(
@@ -298,11 +321,14 @@ async def startup_event():
     logger.info(f"API running on {FASTAPI_HOST}:{FASTAPI_PORT}")
     logger.info("=" * 80)
 
+    # MongoDB connection is handled by Motor automatically
+
 
 @app.on_event("shutdown")
 async def shutdown_event():
     """Cleanup on shutdown"""
     logger.info("HC-03 System Shutting Down")
+    db.client.close()
 
 
 # ==================== Main ====================
