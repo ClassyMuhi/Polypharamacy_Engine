@@ -1,0 +1,22 @@
+{
+    "interactions": [
+        {
+            "drug1": "warfarin",
+            "drug2": "aspirin",
+            "risk": "High Risk",
+            "description": "bleeding risk"
+        },
+        {
+            "drug1": "warfarin",
+            "drug2": "ibuprofen",
+            "risk": "High Risk",
+            "description": "increased risk of bleeding"
+        },
+        {
+            "drug1": "aspirin",
+            "drug2": "ibuprofen",
+            "risk": "Moderate Risk",
+            "description": "decreased cardioprotective effect of aspirin and increased GI bleeding risk"
+        }
+    ]
+}
